@@ -12,12 +12,13 @@
     height: 64px;
     border-radius: 50%;
     z-index: 2;
+    box-shadow: #e4ddd0 0 0 2px 2px;;
 }
 
 .corner {
     background-color: inherit;
-    width: 32px;
-    height: 32px;
+    width: 50px;
+    height: 50px;
     align-self: flex-end;
     flex: none;
     margin-left: -20px;
@@ -43,25 +44,30 @@
 
 .messageBox {
     background-color: cadetblue;
-    border-radius: 5px 5px 5px 0;
+    border-radius: 20px 50px 20px 0;
     display: flex;
     padding: 10px;
+    box-shadow: #e4ddd0 0 0 2px 2px;
+
 }
 
 .name {
     color: navy;
     font-weight: bold;
+    text-shadow: 1px 1px 2px pink;
 }
 
 .messageText {
     color: purple;
     word-wrap: break-word;
     white-space: pre-line;
+    text-shadow: #FC0 1px 0 10px;
 }
 
 .time {
-    color: goldenrod;
+    color: #a4c9a8;
     font-size: smaller;
     margin-left: 10px;
     align-self: flex-end;
+    text-shadow: 1px 1px 2px green, 0 0 1em yellow, 0 0 0.2em blue;
 }
