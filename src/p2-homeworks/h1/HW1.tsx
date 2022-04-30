@@ -1,6 +1,6 @@
 import React from 'react'
-import Message from "./Message";
-import AlternativeMessage from "./AlternativeMessage";
+import {Message} from "./Message";
+import {AlternativeMessage} from "./AlternativeMessage";
 
 const messageData = {
   avatar: 'https://sun9-74.userapi.com/Ph-WiuOtF985il9AvN9JqiCWedmHtSGSSTXrSA/ltEB2Z2-YO4.jpg',
@@ -13,10 +13,9 @@ const alternativeMessageData = {
   avatar: 'https://avatars.githubusercontent.com/u/36849366?s=100',
   name: 'SPK80',
   message: `How do? <^_^>
-    It\`s me`!,
+  It\`s me!`,
   time: '02:00',
 }
-
 
 function HW1() {
   return (

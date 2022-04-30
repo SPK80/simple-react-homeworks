@@ -1,29 +1,26 @@
 .message {
-    background-color: chartreuse;
-    padding: 5px;
-    width: 480px;
+    background-color: #a7e500;
     position: relative;
+    padding: 5px;
+    display: flex;
 }
 
 .avatar {
-    border-radius: 50%;
+    flex: none;
+    align-self: flex-end;
     width: 64px;
     height: 64px;
-    left: 8px;
-    position: absolute;
-    bottom: 5px;
-    z-index: 1;
+    border-radius: 50%;
+    z-index: 2;
 }
 
 .corner {
     background-color: inherit;
     width: 32px;
     height: 32px;
-    position: absolute;
-    bottom: 0;
-    left: 48px;
-    margin: 5px;
-    z-index: 0;
+    align-self: flex-end;
+    flex: none;
+    margin-left: -20px;
 }
 
 .circle {
@@ -31,51 +28,40 @@
     height: 100%;
     background-color: inherit;
     border-radius: 50%;
-    position: absolute;
+    position: relative;
+    z-index: 1;
 }
 
 .square {
+    background-color: #063106;
     width: 50%;
     height: 50%;
-    background-color: #183618;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    margin-right: -4px;
+    position: relative;
+    left: 50%;
+    top: -50%;
 }
 
 .messageBox {
-    background-color: #183618;
-    border-radius: 5px;
-    height: 100%;
-    width: 82%;
+    background-color: #063106;
+    border-radius: 5px 5px 5px 0;
     display: flex;
-    justify-content: space-between;
-    position: relative;
-    left: 80px;
-    color: #bfd0bf;
-}
-
-.nameAndMessage {
     padding: 10px;
-    color: inherit;
-    overflow-x: hidden;
 }
 
 .name {
-    color: #b479e8;
+    color: #a6a8d1;
     font-weight: bold;
 }
 
 .messageText {
-    color: inherit;
+    color: #a4c9a8;
+    word-wrap: break-word;
     white-space: pre-line;
 }
 
 .time {
-    color: inherit;
-    margin-top: auto;
-    margin-bottom: 0;
-    padding: 10px;
+    color: #4a8f4c;
     font-size: smaller;
+    margin-left: 10px;
+    align-self: flex-end;
 }
