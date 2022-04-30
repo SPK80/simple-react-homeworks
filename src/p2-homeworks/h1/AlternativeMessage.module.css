@@ -1,0 +1,82 @@
+.message {
+    background-color: #c4d99f;
+    padding: 5px;
+    width: 480px;
+    position: relative;
+}
+
+.avatar {
+    border-radius: 50%;
+    width: 64px;
+    height: 64px;
+    left: 8px;
+    position: absolute;
+    bottom: 5px;
+    z-index: 1;
+    box-shadow: 0 0 4px 2px darkseagreen;
+}
+
+.corner {
+    background-color: inherit;
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    bottom: 0;
+    left: 48px;
+    margin: 5px;
+    z-index: 0;
+}
+
+.circle {
+    width: 100%;
+    height: 100%;
+    background-color: inherit;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.square {
+    background-color: cadetblue;
+    width: 50%;
+    height: 50%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin-right: -4px;
+}
+
+.messageBox {
+    background-color: cadetblue;
+    border-radius: 5px;
+    height: 100%;
+    width: 82%;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    left: 80px;
+    color: purple;
+}
+
+.nameAndMessage {
+    padding: 10px;
+    color: inherit;
+    overflow-x: hidden;
+}
+
+.name {
+    color: navy;
+    font-weight: bold;
+}
+
+.messageText {
+    color: inherit;
+    white-space: pre-line;
+}
+
+.time {
+    color: goldenrod;
+    margin-top: auto;
+    margin-bottom: 0;
+    padding: 10px;
+    font-size: smaller;
+}
