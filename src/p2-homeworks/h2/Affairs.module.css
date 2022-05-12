@@ -1,3 +1,38 @@
-.someClass {
+.affairs {
+    padding: 10px;
+    background: rgba(245, 245, 220, 1);
+    min-width: 200px;
+    max-width: 300px;
+}
 
+.affair {
+    display: flex;
+    justify-content: space-between;
+    margin: 3px;
+    background: #d3d295;
+    border-radius: 6px;
+}
+
+.affair div {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 5px;
+}
+
+.name {
+    color: darkslateblue;
+    font-weight: bold;
+    flex-basis: content;
+}
+
+.lowPriority {
+    color: navy;
+}
+
+.middlePriority {
+    color: darkmagenta;
+}
+
+.highPriority {
+    color: crimson;
 }
