@@ -1,7 +1,28 @@
-.affair {
-
-}
-
 .error {
     border: 1px solid red;
+}
+
+.greeting {
+    background-color: #a7e500;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.greeting input {
+    background-color: blanchedalmond;
+    border-radius: 3px;
+    text-shadow: #FFCC00 1px 1px 1px;
+    font-size: 14px;
+    padding: 3px;
+}
+
+.greeting button {
+    margin: 2px;
+    box-shadow: red 0 0 2px;
+}
+
+.totalUsers {
+    margin: 5px;
+    text-shadow: red 0 0 6px;
 }
