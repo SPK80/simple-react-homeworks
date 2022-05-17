@@ -19,10 +19,30 @@
 
 .greeting button {
     margin: 2px;
-    box-shadow: red 0 0 2px;
+    box-shadow: dimgray 0 0 3px;
 }
 
 .totalUsers {
     margin: 5px;
     text-shadow: red 0 0 6px;
+}
+
+.greetingMessage {
+    background-color: yellow;
+    font-weight: bold;
+    color: darkmagenta;
+    padding: 5px;
+    border-radius: 5px;
+    margin-left: 10px;
+    box-shadow: forestgreen 0 0 6px;
+}
+
+.errorMessage {
+    background-color: pink;
+    font-weight: bold;
+    color: darkblue;
+    padding: 5px;
+    border-radius: 5px;
+    margin-left: 10px;
+    box-shadow: red 0 0 6px;
 }
