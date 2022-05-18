@@ -34,7 +34,7 @@ export const AlternativeGreeting: React.FC<PropsType> = (props) => {
             <span className={s.totalUsers}>users: {props.usersCount}</span>
             
             {props.greetingMessage && <div className={s.greetingMessage}>{props.greetingMessage}</div>}
-            {!props.errorMessage && <div className={s.errorMessage}>{props.errorMessage}</div>}
+            {props.errorMessage && <div className={s.errorMessage}>{props.errorMessage}</div>}
         </div>
     );
 }
