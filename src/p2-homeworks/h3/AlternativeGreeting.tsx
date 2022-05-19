@@ -1,4 +1,4 @@
-import React, {ChangeEvent} from "react";
+import React, {ChangeEvent, KeyboardEvent} from "react";
 import s from './Greeting.module.css';
 
 type PropsType = {
@@ -17,12 +17,18 @@ export const AlternativeGreeting: React.FC<PropsType> = (props) => {
 
     const onClickConfirmHandler = () => props.confirm()
 
+    const onKeyPressHandler = (e:KeyboardEvent<HTMLInputElement>) => {
+        if (e.key === 'Enter') {
+            props.confirm()
+        }
+    };
     return (
         <div className={s.greeting}>
             <div><input
                 type="text"
                 value={props.name}
                 onChange={onChangeNameHandler}
+                onKeyPress={onKeyPressHandler}
                 placeholder='Enter your name'/>
                 <button
                     onClick={onClickConfirmHandler}

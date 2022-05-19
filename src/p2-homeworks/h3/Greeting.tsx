@@ -1,4 +1,4 @@
-import React, {ChangeEvent} from 'react'
+import React, {ChangeEvent, KeyboardEvent} from 'react'
 import s from './Greeting.module.css'
 
 type GreetingPropsType = {
@@ -15,6 +15,12 @@ const Greeting: React.FC<GreetingPropsType> = (
 ) => {
     const inputClass = error ? s.inputError : ''
 
+    const onKeyPressHandler = (e:KeyboardEvent<HTMLInputElement>) => {
+        if (e.key === 'Enter') {
+            addUser()
+        }
+    };
+
     return (
         <div className={s.greeting}>
             <div>
@@ -22,6 +28,7 @@ const Greeting: React.FC<GreetingPropsType> = (
                     className={inputClass}
                     value={name}
                     onChange={setNameCallback}
+                    onKeyPress={onKeyPressHandler}
                 />
                 <button
                     onClick={addUser}
