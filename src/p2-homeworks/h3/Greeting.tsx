@@ -22,11 +22,10 @@ const Greeting: React.FC<GreetingPropsType> = (
                     className={inputClass}
                     value={name}
                     onChange={setNameCallback}
-                    onBlur={setNameCallback}
                 />
                 <button
                     onClick={addUser}
-                    disabled={name === ''}
+                    disabled={name===''}
                 > add
                 </button>
             </div>
