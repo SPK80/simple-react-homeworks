@@ -19,22 +19,21 @@ export const AlternativeGreeting: React.FC<PropsType> = (props) => {
     
     return (
         <div className={s.greeting}>
-            <input
+            <div><input
                 type="text"
                 value={props.name}
                 onChange={onChangeNameHandler}
-                placeholder='Enter your name'
-            />
-            <button
-                onClick={onClickConfirmHandler}
-                disabled={props.name === ''}
-            >
-                add
-            </button>
-            <span className={s.totalUsers}>users: {props.usersCount}</span>
+                placeholder='Enter your name'/>
+                <button
+                    onClick={onClickConfirmHandler}
+                    disabled={props.name === ''}
+                > add
+                </button>
+            </div>
+            {props.errorMessage && <div className={s.errorMessage}>{props.errorMessage}</div>}
+            <div className={s.totalUsers}>users: {props.usersCount}</div>
             
             {props.greetingMessage && <div className={s.greetingMessage}>{props.greetingMessage}</div>}
-            {props.errorMessage && <div className={s.errorMessage}>{props.errorMessage}</div>}
         </div>
     );
 }

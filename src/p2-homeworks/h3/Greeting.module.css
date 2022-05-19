@@ -1,12 +1,11 @@
 .error {
     border: 1px solid red;
+    color: red;
 }
 
 .greeting {
     background-color: #a7e500;
     padding: 5px;
-    display: flex;
-    align-items: center;
 }
 
 .greeting input {
@@ -28,21 +27,23 @@
 }
 
 .greetingMessage {
+    width: fit-content;
     background-color: yellow;
     font-weight: bold;
     color: darkmagenta;
     padding: 5px;
+    margin: 5px;
     border-radius: 5px;
-    margin-left: 10px;
     box-shadow: forestgreen 0 0 6px;
 }
 
 .errorMessage {
+    width: fit-content;
     background-color: pink;
     font-weight: bold;
     color: darkblue;
     padding: 5px;
+    margin: 5px;
     border-radius: 5px;
-    margin-left: 10px;
     box-shadow: red 0 0 6px;
 }
