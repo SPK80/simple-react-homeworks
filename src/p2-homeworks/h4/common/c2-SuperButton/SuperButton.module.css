@@ -3,5 +3,8 @@
 }
 
 .red {
-    background: red;
+    background: orangered;
+    border-radius: 3px;
+    border: 1px solid darkcyan;
+    padding: 2px 7px 2px 7px;
 }

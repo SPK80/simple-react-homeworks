@@ -1,12 +1,15 @@
-.superInput {
-
+.errorInput {
+    border: 2px solid darkcyan;
+    border-radius: 3px;
+    background: orangered;
 }
 
-.errorInput {
-    border: 3px solid lime;
-    background: red;
+.superInput {
+    border: 2px solid darkcyan;
+    border-radius: 3px;
+    background: lemonchiffon;
 }
 
 .error {
-    color: red;
+    color: orangered;
 }
