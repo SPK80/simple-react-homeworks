@@ -1,7 +1,12 @@
-.error {
+.inputError {
     border: 1px solid red;
+}
+
+.errorMessage {
+    width: fit-content;
     color: red;
 }
+
 
 .greeting {
     background-color: #a7e500;
@@ -26,7 +31,7 @@
     text-shadow: red 0 0 6px;
 }
 
-.greetingMessage {
+.alternativeGreetingMessage {
     width: fit-content;
     background-color: yellow;
     font-weight: bold;
@@ -37,7 +42,7 @@
     box-shadow: forestgreen 0 0 6px;
 }
 
-.errorMessage {
+.alternativeErrorMessage {
     width: fit-content;
     background-color: pink;
     font-weight: bold;

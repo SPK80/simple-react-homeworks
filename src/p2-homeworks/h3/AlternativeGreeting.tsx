@@ -11,12 +11,12 @@ type PropsType = {
 }
 
 export const AlternativeGreeting: React.FC<PropsType> = (props) => {
-    
+
     const onChangeNameHandler = (e: ChangeEvent<HTMLInputElement>) =>
         props.changeName(e.currentTarget.value)
-    
+
     const onClickConfirmHandler = () => props.confirm()
-    
+
     return (
         <div className={s.greeting}>
             <div><input
@@ -30,10 +30,10 @@ export const AlternativeGreeting: React.FC<PropsType> = (props) => {
                 > add
                 </button>
             </div>
-            {props.errorMessage && <div className={s.errorMessage}>{props.errorMessage}</div>}
+            {props.errorMessage && <div className={s.alternativeErrorMessage}>{props.errorMessage}</div>}
             <div className={s.totalUsers}>users: {props.usersCount}</div>
-            
-            {props.greetingMessage && <div className={s.greetingMessage}>{props.greetingMessage}</div>}
+
+            {props.greetingMessage && <div className={s.alternativeGreetingMessage}>{props.greetingMessage}</div>}
         </div>
     );
 }
