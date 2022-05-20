@@ -1,19 +1,23 @@
 .default {
-    background: #f1dfc3;
-    border-radius: 3px;
-    border: 1px solid darkcyan;
-}
-
-.red:hover {
-    border: 1px solid #420230;
+    background: burlywood;
+    border-radius: 2px;
+    margin: 2px;
+    border:0;
+    outline: 1px solid darkcyan;
 }
 
 .default:hover {
-    border: 1px solid #420230;
+    outline: 2px solid darkcyan;
 }
 
 .red {
     background: orangered;
-    border-radius: 3px;
-    border: 1px solid darkcyan;
+    border-radius: 2px;
+    margin: 1px;
+    border: 0;
+    outline: 1px solid darkcyan;
+}
+
+.red:hover {
+    outline: 2px solid darkcyan;
 }
