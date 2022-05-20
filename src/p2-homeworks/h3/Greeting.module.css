@@ -3,28 +3,29 @@
 }
 
 .errorMessage {
+    display: block;
     width: fit-content;
     color: red;
 }
 
-
 .greeting {
     background-color: #a7e500;
     padding: 5px;
+    display: flex;
 }
 
-.greeting input {
-    background-color: blanchedalmond;
-    border-radius: 3px;
-    text-shadow: #FFCC00 1px 1px 1px;
-    font-size: 14px;
-    padding: 3px;
-}
+/*.greeting input {*/
+/*    background-color: blanchedalmond;*/
+/*    border-radius: 3px;*/
+/*    text-shadow: #FFCC00 1px 1px 1px;*/
+/*    font-size: 14px;*/
+/*    padding: 3px;*/
+/*}*/
 
-.greeting button {
-    margin: 2px;
-    box-shadow: dimgray 0 0 3px;
-}
+/*.greeting button {*/
+/*    margin: 2px;*/
+/*    box-shadow: dimgray 0 0 3px;*/
+/*}*/
 
 .totalUsers {
     margin: 5px;
