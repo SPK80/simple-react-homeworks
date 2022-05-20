@@ -1,10 +1,19 @@
 .default {
+    background: #f1dfc3;
+    border-radius: 3px;
+    border: 1px solid darkcyan;
+}
 
+.red:hover {
+    border: 1px solid #420230;
+}
+
+.default:hover {
+    border: 1px solid #420230;
 }
 
 .red {
     background: orangered;
     border-radius: 3px;
     border: 1px solid darkcyan;
-    padding: 2px 7px 2px 7px;
 }
