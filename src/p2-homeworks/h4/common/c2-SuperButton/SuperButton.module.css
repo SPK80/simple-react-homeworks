@@ -1,13 +1,12 @@
 .default {
     background: burlywood;
     border-radius: 2px;
-    margin: 2px;
-    border:0;
-    outline: 1px solid darkcyan;
+    border: 0;
+    border: 1px solid darkcyan;
 }
 
 .default:hover {
-    outline: 2px solid darkcyan;
+    background: #ffbe85;
 }
 
 .red {
@@ -19,5 +18,5 @@
 }
 
 .red:hover {
-    outline: 2px solid darkcyan;
+    background: #ff8e67;
 }
