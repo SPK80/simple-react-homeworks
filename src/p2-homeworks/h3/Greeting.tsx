@@ -17,18 +17,21 @@ const Greeting: React.FC<GreetingPropsType> = (
 ) => {
     return (
         <div className={s.greeting}>
+            <span>
                 <SuperInputText
                     value={name}
                     onChangeText={setNameCallback}
                     onEnter={addUser}
                     spanClassName={s.errorMessage}
-                    error={error?'Please enter you name':''}
+                    error={error ? 'Please enter you name' : ''}
                 />
-                <SuperButton
-                    onClick={addUser}
-                    disabled={name === ''}
-                > add
-                </SuperButton>
+            </span>
+            <SuperButton
+                className={s.addButton}
+                onClick={addUser}
+                disabled={name === ''}
+            > add
+            </SuperButton>
             <span className={s.totalUsers}>users: {totalUsers}</span>
         </div>
     )

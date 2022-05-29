@@ -12,6 +12,7 @@
     background-color: #a7e500;
     padding: 5px;
     display: flex;
+    align-items: flex-start;
 }
 
 /*.greeting input {*/
@@ -22,10 +23,10 @@
 /*    padding: 3px;*/
 /*}*/
 
-/*.greeting button {*/
-/*    margin: 2px;*/
-/*    box-shadow: dimgray 0 0 3px;*/
-/*}*/
+.addButton {
+    margin: 4px;
+    /*box-shadow: dimgray 0 0 3px;*/
+}
 
 .totalUsers {
     margin: 5px;
