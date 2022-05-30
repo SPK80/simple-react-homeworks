@@ -2,6 +2,7 @@
   "name": "simple-react-homeworks",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://spk80.github.io/simple-react-homeworks/",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
@@ -13,7 +14,7 @@
     "@types/uuid": "^8.3.4",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-scripts": "3.4.1",
+    "react-scripts": "5.0.1",
     "typescript": "~3.7.2",
     "uuid": "^8.3.2"
   },
