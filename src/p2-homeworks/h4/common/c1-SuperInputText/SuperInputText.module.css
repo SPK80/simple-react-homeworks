@@ -1,13 +1,19 @@
-.errorInput {
+.defaultInput {
+    outline: none;
     border: 2px solid darkcyan;
     border-radius: 3px;
+}
+
+.errorInput {
     background: orangered;
 }
 
 .superInput {
-    border: 2px solid darkcyan;
-    border-radius: 3px;
     background: lemonchiffon;
+}
+
+.defaultInput:focus {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .error {
