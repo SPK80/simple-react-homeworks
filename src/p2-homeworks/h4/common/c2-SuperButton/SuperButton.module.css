@@ -1,22 +1,111 @@
 .default {
-    background: burlywood;
-    border-radius: 2px;
+
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
     border: 0;
-    border: 1px solid darkcyan;
+    border-radius: 0;
+    background: #ccc;
+
+    /*webkit-writing-mode: horizontal-tb !important;*/
+    /*-webkit-appearance: button;*/
+    /*border-color: rgb(216, 216, 216) rgb(209, 209, 209) rgb(186, 186, 186);*/
+    /*border-style: solid;*/
+    /*border-width: 1px;*/
+    /*padding: 1px 7px 2px;*/
+    /*text-rendering: auto;*/
+    /*color: initial;*/
+    /*display: inline-block;*/
+    /*text-align: start;*/
+    /*margin: 0em;*/
+    /*font: 400 11px system-ui;*/
+
+
+    /*display: inline-block;*/
+    /*line-height: 28px;*/
+    /*cursor: pointer;*/
+    /*text-transform: uppercase;*/
+    /*border-radius: 10px;*/
+    /*padding: 0 10px;*/
+    /*font-size: 18px;*/
+    /*background: #fff;*/
+    /*position: relative;*/
+
+    /*-webkit-transition: all 0.2s ease 0s;*/
+    /*-moz-transition: all 0.2s ease 0s;*/
+    /*-ms-transition: all 0.2s ease 0s;*/
+    /*-o-transition: all 0.2s ease 0s;*/
+    /*transition: all 0.5s ease 0s;*/
+    /*transform: scale(1);*/
+    /*transform: rotate(-1deg);*/
 }
 
-.default:hover {
-    background: #ffbe85;
-}
+/*.default:before {*/
+/*    content: '';*/
+/*    position: absolute;*/
+/*    width: 100%;*/
+/*    height: 100%;*/
+/*    top: 0;*/
+/*    left: 0;*/
+/*    border-radius: 10px;*/
+/*    background: #bcff95;*/
+/*    transition: all 0.2s ease 0s;*/
+/*    !*transform: scale(0);*!*/
+/*    !*-webkit-transition: all 0.2s ease 0s;*!*/
+/*    !*-moz-transition: all 0.2s ease 0s;*!*/
+/*    !*-ms-transition: all 0.2s ease 0s;*!*/
+/*    !*-o-transition: all 0.2s ease 0s;*!*/
+
+/*}*/
+
+/*.default[disabled]{*/
+    /*background-color: darkblue;*/
+/*}*/
+
+/*.default:hover {*/
+/*    color: darkblue;*/
+/*    !*transform: scale(1.05);*!*/
+/*    transform: rotate(3deg);*/
+/*}*/
+
+/*.default:hover:before {*/
+/*    color: #fff;*/
+/*    !*transform: scale(1);*!*/
+
+/*}*/
+
 
 .red {
-    background: orangered;
-    border-radius: 2px;
-    margin: 1px;
+    /*webkit-writing-mode: horizontal-tb !important;*/
+
+    /*-webkit-appearance: none;*/
+    /*-moz-appearance: none;*/
+    /*appearance: none;*/
+
+    /*border-color: rgb(216, 216, 216) rgb(209, 209, 209) rgb(186, 186, 186);*/
+    /*border-style: solid;*/
+    /*border-width: 1px;*/
+    /*padding: 1px 7px 2px;*/
+    /*text-rendering: auto;*/
+    /*color: initial;*/
+    /*display: inline-block;*/
+    /*text-align: start;*/
+    /*margin: 0em;*/
+    /*font: 400 11px system-ui;*/
+
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
     border: 0;
-    outline: 1px solid darkcyan;
+    border-radius: 0;
+    background: red;
 }
 
-.red:hover {
-    background: #ff8e67;
+.c-button:hover {
+    background: #1d49aa;
+}
+
+.c-button:focus {
+    outline: none;
+    box-shadow: 0 0 0 4px #cbd6ee;
 }
