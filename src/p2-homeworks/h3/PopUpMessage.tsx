@@ -15,7 +15,9 @@ export const PopUpMessage = (props: PopUpMessagePropsType) => {
     if (props.show) finalClassName += (' ' + s.show)
     else finalClassName += (' ' + s.disappear)
 
+    if (message==='') finalClassName = s.hidden
+
     return (
-        (message !== '') ? <span className={finalClassName}>{message}</span> : <></>
+        <span className={finalClassName}>{message}</span>
     )
 }
