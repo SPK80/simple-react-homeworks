@@ -1,6 +1,33 @@
 .checkbox {
-
+    display: inline-block;
+    position: relative;
 }
+
+.checkbox input {
+    display: none;
+}
+
+.checkbox i {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border: 1px solid #ccc;
+}
+
+/*.checkbox input + i {*/
+/*    border-radius: 50%;*/
+/*}*/
+
+.checkbox i:before {
+    content: '12';
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    left: 5px;
+    top: 5px;
+    background: red;
+}
+
 
 .spanClassName {
 
