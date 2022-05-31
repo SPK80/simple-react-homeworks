@@ -1,6 +1,6 @@
 .checkbox {
-    display: inline-block;
-    position: relative;
+    display: flex;
+    align-items: center;
 }
 
 .checkbox input {
@@ -8,27 +8,36 @@
 }
 
 .checkbox i {
+    position: relative;
     display: inline-block;
-    width: 50px;
-    height: 50px;
+    width: 30px;
+    height: 15px;
     border: 1px solid #ccc;
+    border-radius: 10px;
 }
 
-/*.checkbox input + i {*/
-/*    border-radius: 50%;*/
-/*}*/
+.checkbox input:checked + i:before {
+    transition: 0.5s;
+    top: 4%;
+    bottom: 4%;
+    left: 52%;
+    right: 2%;
+    background: red;
+}
 
 .checkbox i:before {
-    content: '12';
+    content: '';
     position: absolute;
-    bottom: 5px;
-    right: 5px;
-    left: 5px;
-    top: 5px;
-    background: red;
+    top: 4%;
+    bottom: 4%;
+    left: 2%;
+    right: 52%;
+    border-radius: 50%;
+    transition: 0.5s;
+    background: darkseagreen;
 }
 
 
 .spanClassName {
-
+    height: 100%;
 }
