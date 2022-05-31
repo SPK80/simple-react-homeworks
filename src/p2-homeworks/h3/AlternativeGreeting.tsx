@@ -1,5 +1,8 @@
 import React, {ChangeEvent, KeyboardEvent} from "react";
 import s from './Greeting.module.css';
+import SuperButton from "../h4/common/c2-SuperButton/SuperButton";
+import SuperInputText from "../h4/common/c1-SuperInputText/SuperInputText";
+import {PopUpMessage} from "./PopUpMessage";
 
 type PropsType = {
     name: string
@@ -7,7 +10,7 @@ type PropsType = {
     changeName: (name: string) => void
     confirm: () => void
     greetingMessage: string | null
-    errorMessage: string | null
+    error:boolean
 }
 
 export const AlternativeGreeting: React.FC<PropsType> = (props) => {
@@ -17,29 +20,41 @@ export const AlternativeGreeting: React.FC<PropsType> = (props) => {
 
     const onClickConfirmHandler = () => props.confirm()
 
-    const onKeyPressHandler = (e:KeyboardEvent<HTMLInputElement>) => {
+    const onKeyPressHandler = (e: KeyboardEvent<HTMLInputElement>) => {
         if (e.key === 'Enter') {
             props.confirm()
         }
     };
     return (
         <div className={s.greeting}>
-            <div><input
-                type="text"
-                value={props.name}
-                onChange={onChangeNameHandler}
-                onKeyPress={onKeyPressHandler}
-                placeholder='Enter your name'/>
-                <button
+            <div>
+                <SuperInputText
+                    type="text"
+                    value={props.name}
+                    onChange={onChangeNameHandler}
+                    onKeyDown={onKeyPressHandler}
+                    placeholder='Enter your name'
+                />
+                <SuperButton
                     onClick={onClickConfirmHandler}
                     disabled={props.name === ''}
+                    className={s.altAddButton}
                 > add
-                </button>
+                </SuperButton>
             </div>
-            {props.errorMessage && <div className={s.alternativeErrorMessage}>{props.errorMessage}</div>}
+
+            <PopUpMessage
+                text={'Spaces are not allowed'}
+                show={props.error}
+            />
+
             <div className={s.totalUsers}>users: {props.usersCount}</div>
 
-            {props.greetingMessage && <div className={s.alternativeGreetingMessage}>{props.greetingMessage}</div>}
+            <PopUpMessage
+                text={props.greetingMessage??''}
+                show={props.greetingMessage!==null}
+            />
+
         </div>
     );
 }

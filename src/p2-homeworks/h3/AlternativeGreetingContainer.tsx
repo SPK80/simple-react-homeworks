@@ -10,15 +10,15 @@ const AlternativeGreetingContainer: React.FC<PropsType> = (props) => {
     
     const [name, setName] = useState<string>('')
     const [greetingMessage, setGreetingMessage] = useState<string | null>(null)
-    const [errorMessage, setErrorMessage] = useState<string | null>(null)
+    const [error, setError] = useState<boolean>(false)
     
     const changeName = (newName: string) => {
         const trimmedName = newName.trim();
         if (trimmedName !== newName) {
-            setErrorMessage('Spaces are not allowed')
-            setTimeout(() => setErrorMessage(null), 1000)
+            setError(true)
+            setTimeout(() => setError(false), 2000)
         } else {
-            setErrorMessage(null)
+            setError(false)
         }
         setName(trimmedName)
     }
@@ -38,7 +38,7 @@ const AlternativeGreetingContainer: React.FC<PropsType> = (props) => {
                 changeName={changeName}
                 confirm={confirm}
                 greetingMessage={greetingMessage}
-                errorMessage={errorMessage}
+                error = {error}
             />
         </div>
     )

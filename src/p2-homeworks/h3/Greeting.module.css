@@ -15,17 +15,14 @@
     align-items: flex-start;
 }
 
-/*.greeting input {*/
-/*    background-color: blanchedalmond;*/
-/*    border-radius: 3px;*/
-/*    text-shadow: #FFCC00 1px 1px 1px;*/
-/*    font-size: 14px;*/
-/*    padding: 3px;*/
-/*}*/
-
 .addButton {
     margin: 4px;
-    /*box-shadow: dimgray 0 0 3px;*/
+}
+
+
+.altAddButton {
+    margin: 4px;
+    text-transform: uppercase;
 }
 
 .totalUsers {
@@ -45,6 +42,20 @@
 }
 
 .alternativeErrorMessage {
+    transition: 1s;
+    opacity: 1;
+    width: fit-content;
+    background-color: pink;
+    font-weight: bold;
+    color: darkblue;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 5px;
+    box-shadow: red 0 0 6px;
+}
+.alternativeNoErrorMessage {
+    transition: 1s;
+    opacity: 0;
     width: fit-content;
     background-color: pink;
     font-weight: bold;

@@ -23,7 +23,7 @@ const Greeting: React.FC<GreetingPropsType> = (
                     onChangeText={setNameCallback}
                     onEnter={addUser}
                     spanClassName={s.errorMessage}
-                    error={error ? 'Please enter you name' : ''}
+                    error={error ? 'Please enter your name' : ''}
                 />
             </span>
             <SuperButton
