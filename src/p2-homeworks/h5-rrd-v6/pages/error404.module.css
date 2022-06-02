@@ -1,20 +1,49 @@
 .error404 {
     position: absolute;
     z-index: -1;
-    height: 80%;
+    height: 40vmax;
+    width: 50%;
     min-height: 150px;
+    min-width: 40vmax;
     top: 60px;
-    left: 50px;
-    right: 50px;
+    left: 20%;
+    right: auto;
     bottom: 10px;
-    background: #ecde98;
-    border-radius: 50%;
-    box-shadow: 0 0 50px 50px #ecde98;
+    background: lemonchiffon;
+    border: solid 0.5vmax ;
+    border-radius: 1vmax;
+    box-shadow: 0 0 3px 5px darkcyan;
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    color: #983333;
+    color: orangered;
+    text-shadow: 1px 1px 3px #002ad7;
     font-size: 5vmax;
     font-family: 'Baloo 2', cursive;
+}
+
+.error404 div:nth-child(2) {
+    position: relative;
+    left: 0;
+    top: 0;
+    transform: rotate(0deg);
+    transition-duration: 3s;
+}
+
+.error404 div:nth-child(2) {
+    font-size: 4vmax;
+}
+
+.error404 div:nth-child(3) {
+    font-size: 4vmax;
+    text-shadow: 1px 1px 2px darkcyan;
+    letter-spacing: -4px;
+}
+
+.error404:hover div:nth-child(2) {
+/*background-color: darkblue;*/
+    left: 70px;
+    top: 195px;
+    transform: rotate(-80deg);
 }
