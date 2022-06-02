@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/simple-react-homeworks/static/css/main.5d8a6cea.css",
-    "main.js": "/simple-react-homeworks/static/js/main.c43a3ad6.js",
+    "main.css": "/simple-react-homeworks/static/css/main.e34e32aa.css",
+    "main.js": "/simple-react-homeworks/static/js/main.ade2c159.js",
     "index.html": "/simple-react-homeworks/index.html",
-    "main.5d8a6cea.css.map": "/simple-react-homeworks/static/css/main.5d8a6cea.css.map",
-    "main.c43a3ad6.js.map": "/simple-react-homeworks/static/js/main.c43a3ad6.js.map"
+    "main.e34e32aa.css.map": "/simple-react-homeworks/static/css/main.e34e32aa.css.map",
+    "main.ade2c159.js.map": "/simple-react-homeworks/static/js/main.ade2c159.js.map"
   },
   "entrypoints": [
-    "static/css/main.5d8a6cea.css",
-    "static/js/main.c43a3ad6.js"
+    "static/css/main.e34e32aa.css",
+    "static/js/main.ade2c159.js"
   ]
 }
