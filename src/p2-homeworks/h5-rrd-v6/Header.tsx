@@ -1,24 +1,31 @@
 import React from 'react'
 import {NavLink} from "react-router-dom";
 import {PATH} from "./Pages";
-import SuperButton from "../h4/common/c2-SuperButton/SuperButton";
+import s from "./header.module.css"
 
 function Header() {
     return (
-        <>
-            <SuperButton>
-                <NavLink to={PATH.PRE_JUNIOR}> PreJunior </NavLink>
-            </SuperButton>
+        <div className={s.headerWrap}>
+            <div className={s.navLinks}>
+                <NavLink
+                    className={(navData) => navData.isActive ? s.activeNavLink : s.navLink}
+                    // activeClassName={s.activeNavLink} NavLink activeClassName prop does not exist in v6
+                    to={PATH.PRE_JUNIOR}> PreJunior
+                </NavLink>
+                
+                <NavLink
+                    className={(navData) => navData.isActive ? s.activeNavLink : s.navLink}
+                    to={PATH.JUNIOR}> Junior
+                </NavLink>
+                
+                <NavLink
+                    className={(navData) => navData.isActive ? s.activeNavLink : s.navLink}
+                    to={PATH.JUNIOR_PLUS}> Junior+
+                </NavLink>
             
-            <SuperButton>
-                <NavLink to={PATH.JUNIOR}> Junior </NavLink>
-            </SuperButton>
-            
-            <SuperButton>
-                <NavLink to={PATH.JUNIOR_PLUS}> Junior+ </NavLink>
-            </SuperButton>
-        </>
-    
+            </div>
+            <span></span>
+        </div>
     )
 }
 

@@ -1,0 +1,41 @@
+
+.headerWrap {
+    display: flex;
+    justify-content: space-between;
+    background: #fdf8cc;
+    border-radius: 5px;
+    position: relative;
+    left: -385px;
+    width: 400px;
+    padding: 2px;
+    transition-duration: 0.5s;
+}
+
+.headerWrap:hover {
+    left: 0;
+}
+
+.headerWrap span {
+    display: inline-block;
+    width: 15px;
+    box-shadow: 0 0 2px 2px #FFCC00;
+    justify-self: end;
+    background-color: #FFCC00;
+    border: #cccccc;
+}
+
+.navLinks {
+    display: flex;
+    justify-content: space-evenly;
+    width: 400px;
+}
+
+.navLink {
+    color: navy;
+    text-decoration: none;
+}
+
+.activeNavLink {
+    color: crimson;
+    text-decoration: none;
+}
