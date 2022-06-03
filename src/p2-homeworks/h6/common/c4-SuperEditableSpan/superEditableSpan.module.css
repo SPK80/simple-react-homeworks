@@ -1,0 +1,12 @@
+.superSpan {
+    font-family: inherit;
+    font-size: inherit;
+    border: solid 1px #ccc;
+    padding: 0;
+}
+
+.superSpan:focus {
+    box-shadow: none;
+    outline: none;
+
+}
