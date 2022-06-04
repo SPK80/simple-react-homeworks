@@ -9,18 +9,20 @@ type DefaultInputPropsType = DetailedHTMLProps<InputHTMLAttributes<HTMLInputElem
 type SuperInputTextPropsType = DefaultInputPropsType & { // и + ещё пропсы которых нет в стандартном инпуте
     onChangeText?: (value: string) => void
     onEnter?: () => void
+    onEscape?: () => void
     error?: string
     spanClassName?: string
+    autoSize?: boolean
 }
 
 const SuperInputText: React.FC<SuperInputTextPropsType> = (
     {
         type, // достаём и игнорируем чтоб нельзя было задать другой тип инпута
         onChange, onChangeText,
-        onKeyPress, onEnter,
+        onKeyPress, onEnter, onEscape,
         error,
         className, spanClassName,
-        
+        autoSize,
         ...restProps// все остальные пропсы попадут в объект restProps
     }
 ) => {
@@ -30,25 +32,30 @@ const SuperInputText: React.FC<SuperInputTextPropsType> = (
         
         onChangeText && onChangeText(e.currentTarget.value)
     }
+    
     const onKeyPressCallback = (e: KeyboardEvent<HTMLInputElement>) => {
         onKeyPress && onKeyPress(e);
         
         onEnter // если есть пропс onEnter
         && e.key === 'Enter' // и если нажата кнопка Enter
         && onEnter() // то вызвать его
+        
+        onEscape
+        && e.key === 'Escape'
+        && onEscape()
     }
     
     const finalSpanClassName = `${s.error} ${spanClassName ? spanClassName : ''}`
     const finalInputClassName = `${s.defaultInput} ${error ? s.errorInput : s.superInput} ${className}`
-    
+    const inputSize = autoSize ? ((restProps.value ?? '').toString().length) : 0
     return (
         <>
             <input
                 type={'text'}
                 onChange={onChangeCallback}
-                onKeyPress={onKeyPressCallback}
+                onKeyDown={onKeyPressCallback}
                 className={finalInputClassName}
-                
+                size={inputSize}
                 {...restProps} // отдаём инпуту остальные пропсы если они есть (value например там внутри)
             />
             {error && <span className={finalSpanClassName}>{error}</span>}

@@ -12,9 +12,9 @@ type DefaultSpanPropsType = DetailedHTMLProps<HTMLAttributes<HTMLSpanElement>, H
 type SuperEditableSpanType = DefaultInputPropsType & { // и + ещё пропсы которых нет в стандартном инпуте
     onChangeText?: (value: string) => void
     onEnter?: () => void
+    onEscape?: () => void
     error?: string
     spanClassName?: string
-    className?: string
     spanProps?: DefaultSpanPropsType // пропсы для спана
 }
 
@@ -23,6 +23,7 @@ const SuperEditableSpan: React.FC<SuperEditableSpanType> = (
         autoFocus, // игнорировать изменение этого пропса
         onBlur,
         onEnter,
+        onEscape,
         spanProps,
         
         ...restProps// все остальные пропсы попадут в объект restProps
@@ -36,20 +37,21 @@ const SuperEditableSpan: React.FC<SuperEditableSpanType> = (
         
         onEnter && onEnter()
     }
+    
     const onBlurHandler = (e: React.FocusEvent<HTMLInputElement>) => {
         setEditMode(false) // выключить editMode при нажатии за пределами инпута
         
         onBlur && onBlur(e)
     }
+    
     const onDoubleClickHandler = (e: React.MouseEvent<HTMLSpanElement, MouseEvent>) => {
         setEditMode(true) // включить editMode при двойном клике
         
         onDoubleClick && onDoubleClick(e)
     }
     
-    const spanClassName = `${s.superSpan}  ${className}`
-    const inputClassName = s.superSpan
-    
+    const inputClassName = s.common
+    const spanClassName = `${s.common}  ${className ?? ''}`
     
     return (
         <>
@@ -60,7 +62,7 @@ const SuperEditableSpan: React.FC<SuperEditableSpanType> = (
                         autoFocus // пропсу с булевым значением не обязательно указывать true
                         onBlur={onBlurHandler}
                         onEnter={onEnterHandler}
-                        
+                        autoSize
                         {...restProps} // отдаём инпуту остальные пропсы если они есть (value например там внутри)
                     />
                 ) : (
@@ -68,9 +70,8 @@ const SuperEditableSpan: React.FC<SuperEditableSpanType> = (
                         style={{display: "inline-flex", flexDirection: "row", alignItems: "center"}}
                     >
                         <span
-                            style={{border: "solid 1px #ccc", borderRadius: "3px"}}
-                            onDoubleClick={onDoubleClickHandler}
                             className={spanClassName}
+                            onDoubleClick={onDoubleClickHandler}
     
                             {...restSpanProps}
                         >
