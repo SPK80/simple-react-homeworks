@@ -2,17 +2,12 @@ import React from 'react'
 import {Navigate, Route, Routes} from "react-router-dom";
 import PreJunior from "./pages/PreJunior";
 import Error404 from "./pages/Error404";
+import {Junior} from "./Junior";
 
 export const PATH = {
     PRE_JUNIOR: '/pre-junior',
     JUNIOR: '/junior',
     JUNIOR_PLUS: '/junior-plus',
-}
-
-function Junior() {
-    return (
-        <h3>Junior</h3>
-    )
 }
 
 function JuniorPlus() {
