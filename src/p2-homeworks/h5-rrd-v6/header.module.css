@@ -1,27 +1,21 @@
-
 .headerWrap {
     display: flex;
     justify-content: space-between;
-    background: #fdf8cc;
-    border-radius: 5px;
+    background: #84d5d8;
+    border-radius: 2px;
+    box-shadow: 1px 1px 1px #ccc;
     position: relative;
     left: -385px;
     width: 400px;
     padding: 2px;
-    transition-duration: 0.5s;
+    transition-duration: 1s;
+    transition-delay: 2s;
 }
 
 .headerWrap:hover {
     left: 0;
-}
-
-.headerWrap span {
-    display: inline-block;
-    width: 15px;
-    box-shadow: 0 0 2px 2px #FFCC00;
-    justify-self: end;
-    background-color: #FFCC00;
-    border: #cccccc;
+    transition-duration: 0.5s;
+    transition-delay: 0s;
 }
 
 .navLinks {
@@ -31,11 +25,12 @@
 }
 
 .navLink {
-    color: navy;
+    color: yellow;
     text-decoration: none;
 }
 
 .activeNavLink {
-    color: crimson;
+    color: gold;
+    text-shadow: 1px 1px 2px #ccc;
     text-decoration: none;
 }
