@@ -6,6 +6,7 @@ export function Junior() {
     return (
         <div style={{margin: 10}}>
             <HW7/>
+            <HW8/>
         </div>
     )
 }
