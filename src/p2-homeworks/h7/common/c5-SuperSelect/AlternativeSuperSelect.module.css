@@ -41,9 +41,11 @@
 }
 
 .options span {
+    display: block;
+    box-sizing: border-box;
     padding: 0 2px 1px 2px;
 }
 
 .options span:hover {
-    background-color: lightyellow;
+    background-color: cadetblue;
 }
