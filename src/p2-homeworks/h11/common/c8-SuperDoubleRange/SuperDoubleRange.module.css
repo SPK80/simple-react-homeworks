@@ -4,30 +4,27 @@
     border: 1px solid #ccc;
     border-radius: 5px;
     background: #eee;
-    display: flex;
-    justify-content: left;
-    align-items: center;
+    display: inline-block;
+    /*margin: 10px 0;*/
 }
 
 .slider {
     display: inline-block;
+    position: relative;
     width: 16px;
     height: 16px;
     border-radius: 50%;
-    /*position: relative;*/
+    top: -6.5px;
 }
 
 .lower {
     background: #44f;
-    margin-left: -5px;
-    /*left: 100px;*/
+    left: 100px;
 }
 
 .upper {
     background: #f44;
-    margin-left: 170px;
-    /*margin-right: 50px;*/
-    /*left: 0px;*/
+    left: 0px;
 
 }
 
