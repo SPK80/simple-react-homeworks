@@ -1,17 +1,21 @@
 import React from 'react'
 import Clock from './Clock'
+import {useSelector} from "react-redux";
+import {AppStoreType} from "../h10/bll/store";
+import s from "../h12/HW12.module.css";
 
 function HW9() {
+    const theme = useSelector<AppStoreType, string>(state => state.theme)
+    
     return (
         <div>
             <hr/>
-            homeworks 9
-
-            {/*should work (должно работать)*/}
+            <span className={s[theme + '-text']}>
+                homeworks 9
+            </span>
             <Clock/>
-
+            
             <hr/>
-            {/*для личного творчества, могу проверить*/}
             {/*<AlternativeClock/>*/}
             <hr/>
         </div>

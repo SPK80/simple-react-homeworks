@@ -4,6 +4,7 @@ import {useDispatch, useSelector} from "react-redux";
 import {startLoadingAC, stopLoadingAC} from "./bll/loadingReducer";
 import {AppStoreType} from "./bll/store";
 import {Progress} from "./Progress";
+import s from "../h12/HW12.module.css";
 
 function HW10() {
     const loading = useSelector<AppStoreType, boolean>((state) => state.isLoading);
@@ -13,11 +14,14 @@ function HW10() {
         setTimeout(() => dispatch(stopLoadingAC()), 2000)
         console.log('loading...')
     }
+    const theme = useSelector<AppStoreType, string>(state => state.theme)
     
     return (
         <div>
             <hr/>
-            homeworks 10
+            <span className={s[theme + '-text']}>
+                homeworks 10
+            </span>
             
             {/*should work (должно работать)*/}
             {loading

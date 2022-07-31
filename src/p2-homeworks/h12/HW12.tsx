@@ -5,7 +5,7 @@ import {useDispatch, useSelector} from "react-redux";
 import {changeThemeAC} from "./bll/themeReducer";
 import SuperSelect from "../h7/common/c5-SuperSelect/SuperSelect";
 
-const themes = ['dark', 'red', 'some'];
+const themes = ['dark', 'red', 'some', 'white', 'cadetblue'];
 
 function HW12() {
     const theme = useSelector<AppStoreType, string>(state => state.theme)
@@ -20,7 +20,7 @@ function HW12() {
             <hr/>
             <span className={s[theme + '-text']}>
                 homeworks 12
-            </span>
+             </span>
             <div>
                 <SuperSelect
                     name={'radio'}

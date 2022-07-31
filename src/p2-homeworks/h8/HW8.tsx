@@ -1,6 +1,9 @@
 import React, {useState} from 'react'
 import {homeWorkReducer} from './bll/homeWorkReducer'
 import SuperButton from '../h4/common/c2-SuperButton/SuperButton'
+import s from "../h12/HW12.module.css";
+import {useSelector} from "react-redux";
+import {AppStoreType} from "../h10/bll/store";
 
 export type UserType = { _id: number, name: string, age: number }
 
@@ -15,29 +18,32 @@ const initialPeople = [
 
 function HW8() {
     const [people, setPeople] = useState<Array<UserType>>(initialPeople)
-
+    
     const finalPeople = people.map((p: UserType) => (
         <div key={p._id}>
             some {p.name}, {p.age}
         </div>
     ))
-
+    
     const sortUp = () => setPeople(homeWorkReducer(initialPeople, {type: 'sort', payload: 'up'}))
     const sortDown = () => setPeople(homeWorkReducer(initialPeople, {type: 'sort', payload: 'down'}))
     const check18 = () => setPeople(homeWorkReducer(initialPeople, {type: "check", payload: 18}))
-
+    
+    const theme = useSelector<AppStoreType, string>(state => state.theme)
+    
     return (
         <div>
             <hr/>
-            homeworks 8
-
+            <span className={s[theme + '-text']}>
+                homeworks 8
+             </span>
             {/*should work (должно работать)*/}
             {finalPeople}
-
+            
             <div><SuperButton onClick={sortUp}>sort up</SuperButton></div>
             <div><SuperButton onClick={sortDown}>sort down</SuperButton></div>
             <div><SuperButton onClick={check18}>check 18</SuperButton></div>
-
+            
             <hr/>
             {/*для личного творчества, могу проверить*/}
             {/*<AlternativePeople/>*/}

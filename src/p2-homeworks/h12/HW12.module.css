@@ -21,3 +21,19 @@
 .some-text {
     color: darkslateblue;
 }
+
+.white {
+    background: white;
+}
+
+.white-text {
+    color: black;
+}
+
+.cadetblue {
+    background: cadetblue;
+}
+
+.cadetblue-text {
+    color: orangered;
+}

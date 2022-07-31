@@ -1,4 +1,4 @@
-const initState: string = 'some'
+const initState: string = 'white'
 type ThemeStateType = typeof initState
 
 type ActionsType = ReturnType<typeof changeThemeAC>
