@@ -6,6 +6,7 @@ type DefaultRadioPropsType = DetailedHTMLProps<InputHTMLAttributes<HTMLInputElem
 type SuperRadioPropsType = DefaultRadioPropsType & {
     options?: string[]
     onChangeOption?: (option: string) => void
+    vertical?: boolean
 }
 
 const SuperRadio: React.FC<SuperRadioPropsType> = (
@@ -13,6 +14,7 @@ const SuperRadio: React.FC<SuperRadioPropsType> = (
         type, name,
         options, value,
         onChange, onChangeOption,
+        vertical,
         ...restProps
     }
 ) => {
@@ -37,8 +39,11 @@ const SuperRadio: React.FC<SuperRadioPropsType> = (
         </label>
     )) : []
     
+    let finalClass = s.superRadio
+    vertical && (finalClass = finalClass + " " + s.vertical)
+    
     return (
-        <span className={s.superRadio}>
+        <span className={finalClass} {...restProps}>
             {mappedOptions}
         </span>
     )
